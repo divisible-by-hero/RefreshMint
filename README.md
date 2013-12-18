@@ -1,15 +1,21 @@
-##Django Boilerplate
+##RefreshMint
 
-Django Boilerplate is a set of project layouts that through trial and error we use
-as a best practice.  Details about each project are stored in conf/project.py and are imported to
-allow for maximum re-usability.
+RefreshMint is an open-source starter kit for creating your own Refresh communities.
 
+[Refreshing Cities](http://www.refreshingcities.org)
+
+Features include:
+* Blog
+* Events
+* Member profiles
+* Social media integration
+* Code of Conduct templates
 
 #Assumptions
 
 * Python 2.7, PIP, and virtualenv installed.
 * Use south
-* Django 1.3.1 is the latest version of django at the current time.
+* Django 1.6.1 is the latest version of django at the current time.
 
 ## Setup
 
@@ -19,11 +25,10 @@ Setup a new virtualenv
     
 Activate the virtualenv
     
-    source project/bin/activate
+    source projectname/bin/activate
     
-Install the build requirement of fabric
 
-    pip install fabric
+Run the demo instance
 
-Add any vendor apps to requirements.txt.
-
+    cd example/
+    python manage.py runserver --settings=example.settings

@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ post.title }} | {{ block.super }}{% endblock title %}
+
+
+{% block content %}
+    <section class='container--converse'>
+        {% include 'blog/blog_meta.html' %}
+        {% include 'blog/post_detail_item.html' %}
+    </section>
+{% endblock content %}

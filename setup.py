@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='RefreshMint',
+    name='refreshmint',
     version='0.1.0',
     zip_safe = False,
     packages=find_packages(exclude=['example']),
@@ -9,7 +9,7 @@ setup(
     url='https://github.com/divisible-by-hero/RefreshMint',
     license='MIT',
     author='Garrett Pennington, Derek Stegelman, Jon Faustman',
-    author_email='garrettp@gmail.com',
+    author_email='garrett@divisiblebyhero.com',
     description='RefreshMint is an open-source starter kit for creating your own Refresh communities.',
     classifiers=[
         "Development Status :: 3 - Alpha",

@@ -1,5 +1,4 @@
 from django.views.generic import ListView, DetailView, MonthArchiveView
-from django import forms
 
 from .models import Post
 

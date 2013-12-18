@@ -5,10 +5,12 @@ from hadrian.utils import slugs
 from ckeditor.fields import RichTextField
 from taggit.managers import TaggableManager
 
+from core.models import PublishModel
+
 from .managers import PostManager
 
 
-class Post(models.Model):
+class Post(PublishModel):
     title = models.CharField(blank=False, max_length=450)
     slug = models.SlugField(unique=True)
     image = models.ImageField(blank=True, upload_to='blog/images', null=True)
@@ -16,8 +18,7 @@ class Post(models.Model):
     excerpt = models.TextField(blank=True, null=True)
     meta_description = models.CharField(blank=True, max_length=350, help_text='Meta Description for SEO')
     author = models.ForeignKey(User)
-    published_date = models.DateTimeField()
-    published = models.BooleanField()
+
 
     tags = TaggableManager()
 

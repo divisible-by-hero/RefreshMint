@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+
+{% block content%}
+<section class='container--converse'>
+    
+    <h1 class='container__header'>Converse</h1>
+    
+    {% include 'blog/blog_meta.html' %}
+
+    {% for post in posts %}
+        {% include 'blog/post_detail_item.html' with show_return="True" %}
+    {% endfor %}
+
+</section>
+{% endblock content %}
